@@ -1,0 +1,8 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "allowImportExportEverywhere": 0,
+    "codeFrame": 0,
+    "no-unused-vars": 2
+  }
+}

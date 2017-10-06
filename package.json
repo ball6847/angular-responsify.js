@@ -1,0 +1,33 @@
+{
+  "name": "angular-responsify",
+  "version": "1.0.0",
+  "description": "angularjs responsive utility",
+  "main": "dist/angular-responsify.js",
+  "author": "Porawit Poboonma",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.6.6",
+    "angular-media-queries": "^0.6.1",
+    "angular-mocks": "^1.6.6",
+    "babel-eslint": "7",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "eslint": "3.x",
+    "jasmine": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-browserify": "^5.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-spec-reporter": "^0.0.31",
+    "karma-viewport": "^0.4.2",
+    "rx-angular": "^1.1.3",
+    "watchify": "^3.9.0",
+    "uglifyify": "^4.0.4"
+  },
+  "scripts": {
+    "build:dev": "browserify src/angular-responsify.js -t [ babelify --presets [ es2015 ] ] -o dist/angular-responsify.js",
+    "build": "yarn run build:dev && cat dist/angular-responsify.js | uglifyjs -c > dist/angular-responsify.min.js",
+    "test": "karma start"
+  }
+}
