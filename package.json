@@ -27,7 +27,8 @@
   },
   "scripts": {
     "build:dev": "browserify src/angular-responsify.js -t [ babelify --presets [ es2015 ] ] -o dist/angular-responsify.js",
-    "build": "yarn run build:dev && cat dist/angular-responsify.js | uglifyjs -c > dist/angular-responsify.min.js",
+    "build": "yarn run clean && yarn run build:dev && cat dist/angular-responsify.js | uglifyjs -c > dist/angular-responsify.min.js",
+    "clean": "rm -rf dist/*",
     "test": "karma start"
   }
 }
